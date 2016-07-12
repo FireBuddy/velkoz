@@ -137,6 +137,7 @@ namespace RoninVelkoz
                 var missile = (MissileClient)sender;
                 if (missile.SData.Name != null && missile.SData.Name == "VelkozQMissile")
                     QMissile = missile;
+                    Chat.Print("oncreat");
             }
         }
 
@@ -151,6 +152,7 @@ namespace RoninVelkoz
                 Direction = (missile.EndPosition.To2D() - missile.StartPosition.To2D()).Normalized();
                 Perpendiculars.Add(Direction.Perpendicular());
                 Perpendiculars.Add(Direction.Perpendicular2());
+                Chat.Print("oncreat2");
             }
         }
 
