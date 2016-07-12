@@ -181,7 +181,7 @@ namespace RoninVelkoz
                         }
                         
                         var colliding = collisionObjects
-                            .Where(o => o.Type == GameObjectType.AIHeroClient && o.IsValidTarget()
+                            .Where(o => o.IsValidTarget()
                                     && Prediction.Position.Collision.LinearMissileCollision(o, startPos, endPos, MissileSpeed, SpellWidth, CastDelay, (int)o.BoundingRadius))
                                 .OrderBy(o => o.Distance(Champion, true)).FirstOrDefault();
 
