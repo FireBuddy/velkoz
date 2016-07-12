@@ -175,7 +175,7 @@ namespace RoninVelkoz
                         if (collisionObjects!= null)
                         {
                             Chat.Print("collisionObjects");
-
+                            collisionObjects = null;
                         }
                         
                         var colliding = collisionObjects
