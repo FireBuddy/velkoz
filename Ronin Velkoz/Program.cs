@@ -146,7 +146,7 @@ namespace RoninVelkoz
                     Chat.Print("oncreat2");
                     Perpendiculars.Add(Direction.Perpendicular());
                     Perpendiculars.Add(Direction.Perpendicular2());
-                    
+                    Chat.Print("oncreat3");
                     }
             }
         }
