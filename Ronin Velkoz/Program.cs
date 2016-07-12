@@ -38,6 +38,7 @@ namespace RoninVelkoz
         public static AIHeroClient Champion { get { return Player.Instance; } }
         private static List<Vector2> Perpendiculars { get; set; }
         private static MissileClient QMissile;
+        private static MissileClient Handle;
         /// <summary>
         /// This event is triggered when the game loads
         /// </summary>
