@@ -189,7 +189,7 @@ namespace RoninVelkoz
                         {
                             Chat.Print("Split");
                             SpellsManager.Q.Cast();
-                            DelayAction( () => SpellsManager.Q.Cast(), 100);
+                            DelayAction( () => SpellsManager.Q.Cast(),100);
                             Handle = null;
                         }
                        
