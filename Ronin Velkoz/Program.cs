@@ -159,7 +159,7 @@ namespace RoninVelkoz
         public static void QSplitter(EventArgs args)
         {
             // Check if the missile is active
-            if (Handle != null && Core.GameTickCount - QTime <= 3)
+            if (Handle != null && Core.GameTickCount - QTime <= 3000)
 
             {
                 Chat.Print("Q detected");
