@@ -171,9 +171,7 @@ namespace RoninVelkoz
                         var endPos = Handle.Position.To2D() + 900 * perpendicular;
 
                         var collisionObjects = ObjectManager.Get<Obj_AI_Base>()
-                            .Where(o => !o.IsMe && o.Type == GameObjectType.AIHeroClient && !o.IsDead && !o.IsStructure() && !o.IsWard() && !o.IsInvulnerable
-                                    && o.Distance(Champion, true) < (900 + 200).Pow()
-                                    );
+                            .Where(o => !o.IsMe && o.Type == GameObjectType.AIHeroClient && o.Distance(Champion) < (900));
                         if (collisionObjects!= null)
                         {
                             Chat.Print("collisionObjects");
