@@ -146,7 +146,7 @@ namespace RoninVelkoz
         public static void OnCreate(GameObject sender, EventArgs args)
         {
             // Check if the sender is a MissleClient
-            var missile = sender as MissileClient;
+            var missile = (MissileClient)sender;
             if (missile != null && missile.SpellCaster.IsMe && missile.SData.Name == "VelkozQMissile")
             {
                 // Apply the needed values
