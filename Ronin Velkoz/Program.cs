@@ -158,8 +158,9 @@ namespace RoninVelkoz
         {
             // Check if the missile is active
             if (Handle != null && SpellsManager.Q.IsReady() && SpellsManager.Q.Name == "velkozqsplitactivate")
-            Chat.Print("Q detected");
+
             {
+                Chat.Print("Q detected");
                 foreach (var perpendicular in Perpendiculars)
                 {
                     if (Handle != null)
