@@ -136,8 +136,10 @@ namespace RoninVelkoz
             {
                 var missile = (MissileClient)sender;
                 if (missile.SData.Name != null && missile.SData.Name == "VelkozQMissile")
+                    {
                     QMissile = missile;
                     Chat.Print("oncreat");
+                    }
             }
         }
 
