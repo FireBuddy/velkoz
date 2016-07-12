@@ -188,7 +188,7 @@ namespace RoninVelkoz
                         if (colliding != null)
                         {
                             Chat.Print("Split");
-                            Cast.SpellsManager.Q();
+                            SpellsManager.Q.Cast();
                             Handle = null;
                         }
                        
