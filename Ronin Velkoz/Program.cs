@@ -188,7 +188,8 @@ namespace RoninVelkoz
                         if (colliding != null)
                         {
                             Chat.Print("Split");
-                            DelayAction( () => SpellsManager.Q.Cast(),100);
+                            Core.DelayAction(delegate { SpellsManager.Q.Cast() }, 100);
+
                             Handle = null;
                         }
                        
