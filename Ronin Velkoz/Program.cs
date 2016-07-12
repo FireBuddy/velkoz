@@ -157,7 +157,7 @@ namespace RoninVelkoz
         public static void QSplitter(EventArgs args)
         {
             // Check if the missile is active
-            if (Handle != null)
+            if (Handle != null && SpellManager.Q.LastCastTime < 2)
 
             {
                 Chat.Print("Q detected");
@@ -192,7 +192,7 @@ namespace RoninVelkoz
                        
                     }
                 }
-                Handle = null;
+                
             }
             else
                 Handle = null;
