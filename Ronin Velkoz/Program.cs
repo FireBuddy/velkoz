@@ -172,8 +172,8 @@ namespace RoninVelkoz
 
                         var collisionObjects = ObjectManager.Get<Obj_AI_Base>()
                             .Where(o => !o.IsMe && o.Type == GameObjectType.AIHeroClient && !o.IsDead && !o.IsStructure() && !o.IsWard() && !o.IsInvulnerable
-                                    && o.Distance(Champion, true) < (SpellRange + 200).Pow()
-                                    && o.ServerPosition.To2D().Distance(startPos, endPos, true, true) <= (SpellWidth * 2 + o.BoundingRadius).Pow());
+                                    && o.Distance(Champion, true) < (900 + 200).Pow()
+                                    && o.ServerPosition.To2D().Distance(startPos, endPos, true, true) <= (50 * 2 + o.BoundingRadius).Pow());
                         if (collisionObjects!= null)
                         {
                             Chat.Print("collisionObjects");
