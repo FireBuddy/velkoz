@@ -139,9 +139,10 @@ namespace RoninVelkoz
                     {
                     QMissile = missile;
                     Chat.Print("oncreat");
-                    Chat.Print("oncreat2");
+                    
                     Handle = missile;
                     Direction = (missile.EndPosition.To2D() - missile.StartPosition.To2D()).Normalized();
+                    Chat.Print("oncreat2");
                     Perpendiculars.Add(Direction.Perpendicular());
                     Perpendiculars.Add(Direction.Perpendicular2());
                     
