@@ -130,7 +130,7 @@ namespace RoninVelkoz
             return m[item].Cast<ComboBox>().CurrentValue;
         }
 
-        private static void Obj_AI_Base_OnCreate(GameObject sender, EventArgs args)
+        public static void Obj_AI_Base_OnCreate(GameObject sender, EventArgs args)
         {
             if (sender.IsAlly)
             {
@@ -139,6 +139,11 @@ namespace RoninVelkoz
                     {
                     QMissile = missile;
                     Chat.Print("oncreat");
+                    Handle = missile;
+                    Direction = (missile.EndPosition.To2D() - missile.StartPosition.To2D()).Normalized();
+                     Perpendiculars.Add(Direction.Perpendicular());
+                     Perpendiculars.Add(Direction.Perpendicular2());
+                     Chat.Print("oncreat2");
                     }
             }
         }
@@ -150,11 +155,7 @@ namespace RoninVelkoz
             if ( missile.SData.Name == "VelkozQMissile")
             {
                 // Apply the needed values
-                Handle = missile;
-                Direction = (missile.EndPosition.To2D() - missile.StartPosition.To2D()).Normalized();
-                Perpendiculars.Add(Direction.Perpendicular());
-                Perpendiculars.Add(Direction.Perpendicular2());
-                Chat.Print("oncreat2");
+
             }
         }
 
