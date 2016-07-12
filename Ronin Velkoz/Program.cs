@@ -169,7 +169,7 @@ namespace RoninVelkoz
                         var collisionObjects = ObjectManager.Get<Obj_AI_Base>()
                             .Where(o => o.IsEnemy && !o.IsDead && !o.IsStructure() && !o.IsWard() && !o.IsInvulnerable
                                     && o.Distance(Champion, true) < (SpellRange + 200).Pow()
-                                    && o.ServerPosition.To2D().Distance(startPos, endPos, true, true) <= (SpellWidth * 2 + o.BoundingRadius).Pow());
+                                    && o.ServerPosition.To2D().Distance(startPos, endPos, true, true) <= (SpellWidth * 4 + o.BoundingRadius).Pow());
 
                         var colliding = collisionObjects
                             .Where(o => o.Type == GameObjectType.AIHeroClient && o.IsValidTarget()
