@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using EloBuddy;
 using EloBuddy.SDK.Events;
 using RoninVelkoz.Modes;
@@ -168,13 +168,13 @@ namespace RoninVelkoz
                     if (Handle != null)
                     {
                         var startPos = Handle.Position.To2D();
-                        var endPos = Handle.Position.To2D() + 900 * perpendicular;
+                        var endPos = Handle.Position.To2D() + SpellRange * perpendicular;
 
                         var collisionObjects = ObjectManager.Get<Obj_AI_Base>()
                             .Where(o => !o.IsMe && o.Type == GameObjectType.AIHeroClient && !o.IsDead && !o.IsStructure() && !o.IsWard() && !o.IsInvulnerable
-                                    && o.Distance(Champion, true) < (900 + 200).Pow()
-                                    && o.ServerPosition.To2D().Distance(startPos, endPos, true, true) <= (100 * 2 + o.Boundi
-                        if (collisionObjects!= null)ngRadius).Pow());
+                                    && o.Distance(Champion, true) < (SpellRange + 200).Pow()
+                                    && o.ServerPosition.To2D().Distance(startPos, endPos, true, true) <= (SpellWidth * 2 + o.BoundingRadius).Pow());
+                        if (collisionObjects!= null)
                         {
                             Chat.Print("collisionObjects");
 
