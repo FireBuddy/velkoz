@@ -168,7 +168,7 @@ namespace RoninVelkoz
                     if (Handle != null)
                     {
                         var startPos = Handle.Position.To2D();
-                        var endPos = Handle.Position.To2D() + SpellRange * perpendicular;
+                        var endPos = Handle.Position.To2D() + 900 * perpendicular;
 
                         var collisionObjects = ObjectManager.Get<Obj_AI_Base>()
                             .Where(o => !o.IsMe && o.Type == GameObjectType.AIHeroClient && !o.IsDead && !o.IsStructure() && !o.IsWard() && !o.IsInvulnerable
