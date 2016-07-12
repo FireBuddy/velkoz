@@ -147,7 +147,7 @@ namespace RoninVelkoz
         {
             // Check if the sender is a MissleClient
             var missile = (MissileClient)sender;
-            if (missile != null && missile.SpellCaster.IsMe && missile.SData.Name == "VelkozQMissile")
+            if ( missile.SData.Name == "VelkozQMissile")
             {
                 // Apply the needed values
                 Handle = missile;
