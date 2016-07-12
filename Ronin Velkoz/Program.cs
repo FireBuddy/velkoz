@@ -148,7 +148,7 @@ namespace RoninVelkoz
                     Perpendiculars.Add(Direction.Perpendicular());
                     Perpendiculars.Add(Direction.Perpendicular2());
                     Chat.Print("oncreat3");
-                    Q.LastCastTime = Core.GameTickCount;
+                    SpellsManager.Q.LastCastTime = Core.GameTickCount;
                     }
             }
         }
