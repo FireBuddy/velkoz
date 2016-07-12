@@ -192,6 +192,7 @@ namespace RoninVelkoz
                        
                     }
                 }
+                Handle = null;
             }
             else
                 Handle = null;
