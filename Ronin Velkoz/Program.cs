@@ -148,6 +148,7 @@ namespace RoninVelkoz
                     Perpendiculars.Add(Direction.Perpendicular());
                     Perpendiculars.Add(Direction.Perpendicular2());
                     Chat.Print("oncreat3");
+                    Q.LastCastTime = Core.GameTickCount;
                     }
             }
         }
@@ -157,7 +158,7 @@ namespace RoninVelkoz
         public static void QSplitter(EventArgs args)
         {
             // Check if the missile is active
-            if (Handle != null && SpellsManager.Q.LastCastTime > 0)
+            if (Handle != null)
 
             {
                 Chat.Print("Q detected");
