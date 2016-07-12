@@ -152,16 +152,7 @@ namespace RoninVelkoz
             }
         }
 
-        public static void OnCreate(GameObject sender, EventArgs args)
-        {
-            // Check if the sender is a MissleClient
-            var missile = (MissileClient)sender;
-            if ( missile.SData.Name == "VelkozQMissile")
-            {
-                // Apply the needed values
 
-            }
-        }
 
         public static void QSplitter(EventArgs args)
         {
