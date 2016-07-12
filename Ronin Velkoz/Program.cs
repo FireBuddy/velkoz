@@ -158,6 +158,7 @@ namespace RoninVelkoz
         {
             // Check if the missile is active
             if (Handle != null && SpellsManager.Q.IsReady() && SpellsManager.Q.Name == "velkozqsplitactivate")
+            Chat.Print("Q detected");
             {
                 foreach (var perpendicular in Perpendiculars)
                 {
@@ -169,8 +170,13 @@ namespace RoninVelkoz
                         var collisionObjects = ObjectManager.Get<Obj_AI_Base>()
                             .Where(o => o.IsEnemy && !o.IsDead && !o.IsStructure() && !o.IsWard() && !o.IsInvulnerable
                                     && o.Distance(Champion, true) < (SpellRange + 200).Pow()
-                                    && o.ServerPosition.To2D().Distance(startPos, endPos, true, true) <= (SpellWidth * 4 + o.BoundingRadius).Pow());
+                                    && o.ServerPosition.To2D().Distance(startPos, endPos, true, true) <= (SpellWidth * 2 + o.BoundingRadius).Pow());
+                        if (collisionObjects!= null)
+                        {
+                            Chat.Print("collisionObjects");
 
+                        }
+                        
                         var colliding = collisionObjects
                             .Where(o => o.Type == GameObjectType.AIHeroClient && o.IsValidTarget()
                                     && Prediction.Position.Collision.LinearMissileCollision(o, startPos, endPos, MissileSpeed, SpellWidth, CastDelay, (int)o.BoundingRadius))
@@ -178,10 +184,11 @@ namespace RoninVelkoz
 
                         if (colliding != null)
                         {
-                             Chat.Print("Split");
+                            Chat.Print("Split");
                             Player.CastSpell(SpellSlot.Q);
                             Handle = null;
                         }
+                       
                     }
                 }
             }
