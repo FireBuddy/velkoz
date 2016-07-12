@@ -135,6 +135,7 @@ namespace RoninVelkoz
         {
             if (sender.IsAlly)
             {
+                Perpendiculars = new List<Vector2>();
                 var missile = (MissileClient)sender;
                 if (missile.SData.Name != null && missile.SData.Name == "VelkozQMissile")
                     {
