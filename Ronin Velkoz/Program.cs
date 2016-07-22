@@ -29,7 +29,8 @@ namespace RoninVelkoz
         /// <param name="args"></param>
         private static void Main(string[] args)
         {
-            Loading.OnLoadingComplete += Loading_OnLoadingComplete;
+            //Loading.OnLoadingComplete += Loading_OnLoadingComplete;
+            Loading.OnLoadingCompleteSpectatorMode += Loading_OnLoadingComplete;
         }
         //public static AIHeroClient Player
         //{
