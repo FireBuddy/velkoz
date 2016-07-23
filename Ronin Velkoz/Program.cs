@@ -177,7 +177,7 @@ namespace RoninVelkoz
                         {
                             foreach (var objectz in collisionObject)
                             {
-                            Chat.Print("collisionObjects");
+                            Chat.Print(objectz.Name);
                             }
                             
                         }
