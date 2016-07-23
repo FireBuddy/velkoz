@@ -169,7 +169,7 @@ namespace RoninVelkoz
                         var startPos = Handle.Position.To2D();
                         var endPos = Handle.Position.To2D() + 900 * perpendicular;
 
-                        if (EntityManager.Heroes.Enemies.Count( h => h.IsValidTarget(685) ) > 0)
+                        if (EntityManager.Heroes.Enemies.Count( h => h.IsValidTarget(685) ) > 1)
                         {
                            
                         }
