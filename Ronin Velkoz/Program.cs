@@ -142,7 +142,7 @@ namespace RoninVelkoz
                 if (missile.SData.Name != null && missile.SData.Name == "VelkozQMissile")
                     {
                     QMissile = missile;
-                    Chat.Print("oncreat");
+                    Chat.Print("oncreat" + missile.SData.Name );
                     
                     Handle = missile;
                     Direction = (missile.EndPosition.To2D() - missile.StartPosition.To2D()).Normalized();
