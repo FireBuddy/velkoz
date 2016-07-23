@@ -175,10 +175,9 @@ namespace RoninVelkoz
                             .Where(o => o.Distance(Champion) < (900));
                         if (collisionObjects!= null)
                         {
-                            foreach (var objectz in collisionObject)
-                            {
+
                             Chat.Print("Hi");
-                            }
+                            
                             
                         }
                         
