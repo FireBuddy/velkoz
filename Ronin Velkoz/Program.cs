@@ -171,8 +171,8 @@ namespace RoninVelkoz
                         var startPos = Handle.Position.To2D();
                         var endPos = Handle.Position.To2D() + 900 * perpendicular;
 
-                        var collisionObjects = EntityManager.Heroes.Enemies;
-                        if (collisionObjects.Count(100) >= 1)
+                        var collisionObjects = EntityManager.Heroes.Enemies(700);
+                        if (collisionObjects.Count() >= 1)
                         {
                             Chat.Print("collisionObjects");
                             
