@@ -172,12 +172,12 @@ namespace RoninVelkoz
                         var endPos = Handle.Position.To2D() + 900 * perpendicular;
 
                         var collisionObjects = EntityManager.Heroes.Enemies
-                            .Where(o => o.IsEnemy && o.Type == GameObjectType.AIHeroClient && o.Distance(Champion) < (900));
+                            .Where(o => o.Distance(Champion) < (900));
                         if (collisionObjects!= null)
                         {
                             foreach (var objectz in collisionObject)
                             {
-                            Chat.Print(objectz);
+                            Chat.Print(objectz.Name);
                             }
                             
                         }
