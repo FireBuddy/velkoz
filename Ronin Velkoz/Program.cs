@@ -65,7 +65,7 @@ namespace RoninVelkoz
         public static void OnDraw3(EventArgs args)
         {
              
-             Circle.Draw(SharpDX.Color.Red, 100, 100,Champion.ServerPosition);
+             Circle.Draw(SharpDX.Color.Red, 100, 100,Handle.ServerPosition);
         }
 
         public static void UltFollowMode()
