@@ -40,6 +40,7 @@ namespace RoninVelkoz
         private static List<Vector2> Perpendiculars { get; set; }
         private static MissileClient QMissile;
         private static MissileClient Handle;
+        private static Vector3 LastPosition = Handle.Position.To3D(); 
         public static float QTime = 0;
         /// <summary>
         /// This event is triggered when the game loads
@@ -65,8 +66,8 @@ namespace RoninVelkoz
         public static void OnDraw3(EventArgs args)
         {
              
-             var startPos = Handle.Position.To3D();
-             Circle.Draw(SharpDX.Color.Red, 100, 100, startPos);
+            // var startPos = Handle.Position.To3D();
+            // Circle.Draw(SharpDX.Color.Red, 100, 100, startPos);
         }
 
         public static void UltFollowMode()
