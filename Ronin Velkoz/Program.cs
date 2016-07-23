@@ -175,7 +175,10 @@ namespace RoninVelkoz
                             .Where(o => !o.IsMe && o.Type == GameObjectType.AIHeroClient && o.Distance(Champion) < (900));
                         if (collisionObjects!= null)
                         {
+                            foreach (var objectz in collisionObject)
+                            {
                             Chat.Print("collisionObjects");
+                            }
                             
                         }
                         
