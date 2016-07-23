@@ -65,7 +65,8 @@ namespace RoninVelkoz
         public static void OnDraw3(EventArgs args)
         {
              
-             Circle.Draw(SharpDX.Color.Red, 100, 100, Handle.Position;
+             var startPos = Handle.Position.To2D();
+             Circle.Draw(SharpDX.Color.Red, 100, 100, startPos);
         }
 
         public static void UltFollowMode()
