@@ -146,10 +146,8 @@ namespace RoninVelkoz
                     
                     Handle = missile;
                     Direction = (missile.EndPosition.To2D() - missile.StartPosition.To2D()).Normalized();
-                    Chat.Print("oncreat2");
                     Perpendiculars.Add(Direction.Perpendicular());
                     Perpendiculars.Add(Direction.Perpendicular2());
-                    Chat.Print("oncreat3");
                     QTime = Core.GameTickCount;
                     }
             }
@@ -171,14 +169,9 @@ namespace RoninVelkoz
                         var startPos = Handle.Position.To2D();
                         var endPos = Handle.Position.To2D() + 900 * perpendicular;
 
-                        var collisionObjects = EntityManager.Heroes.Enemies
-                            .Where(o => o.Distance(Champion) < (900));
-                        if (collisionObjects!= null)
+                        foreach (var Enemy in EntityManager.Heroes.Enemies.Where(MyEnemy => MyEnemy.IsEnemy))
                         {
-
-                            Chat.Print("Hi");
-                            
-                            
+                            Drawing.DrawText(0,0, System.Drawing.Color.Red, Enemy.ChampionName);
                         }
                         
                         var colliding = collisionObjects
