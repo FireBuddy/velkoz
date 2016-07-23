@@ -142,12 +142,14 @@ namespace RoninVelkoz
                 if (missile.SData.Name != null && missile.SData.Name == "VelkozQMissile")
                     {
                     QMissile = missile;
-                    Chat.Print("oncreat" + missile.SData.Name );
+                    Chat.Print("oncreat");
                     
                     Handle = missile;
                     Direction = (missile.EndPosition.To2D() - missile.StartPosition.To2D()).Normalized();
+                    Chat.Print("oncreat2");
                     Perpendiculars.Add(Direction.Perpendicular());
                     Perpendiculars.Add(Direction.Perpendicular2());
+                    Chat.Print("oncreat3");
                     QTime = Core.GameTickCount;
                     }
             }
@@ -169,9 +171,11 @@ namespace RoninVelkoz
                         var startPos = Handle.Position.To2D();
                         var endPos = Handle.Position.To2D() + 900 * perpendicular;
 
-                        if (EntityManager.Heroes.Enemies.Count( h => h.IsValidTarget(685) ) > 1)
+                        var collisionObjects = EntityManager.Heroes.Enemies.Count(h => h.IsValidTarget(685)) < 0);
+                        if (collisionObjects!= null)
                         {
-                           
+                            Chat.Print("collisionObjects");
+                            
                         }
                         
                         var colliding = collisionObjects
