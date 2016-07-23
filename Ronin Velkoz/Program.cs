@@ -59,6 +59,13 @@ namespace RoninVelkoz
             Game.OnUpdate += QSplitter;
             GameObject.OnCreate += Obj_AI_Base_OnCreate;
             GameObject.OnCreate += SpellsManager.OnCreate;
+            Drawing.OnDraw += OnDraw3;
+        }
+        
+        public static void OnDraw3(EventArgs args)
+        {
+             
+             Circle.Draw(SharpDX.Color.Red, 100, Config.Drawings.100,Champion.ServerPosition);
         }
 
         public static void UltFollowMode()
