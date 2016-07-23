@@ -171,7 +171,7 @@ namespace RoninVelkoz
 
                         if (EntityManager.Heroes.Enemies.Count( h => h.IsValidTarget(685) ) > 0)
                         {
-                            Chat.Print("Enemy");
+                           
                         }
                         
                         var colliding = collisionObjects
