@@ -210,7 +210,7 @@ namespace RoninVelkoz
                         
                         foreach (var hero in collisionObjects)
                         {
-	                if ( Prediction.Position.Collision.LinearMissileCollision(hero, startPos, endPos + 300, 2000, 100, 1000))
+	                if ( Prediction.Position.Collision.LinearMissileCollision(hero, startPos, endPos + 300, 2000, 100, 2000))
                     	{
 
                             Chat.Print("Split");
