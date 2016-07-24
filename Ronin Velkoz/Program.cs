@@ -87,7 +87,8 @@ namespace RoninVelkoz
                 	const float maxAngle = 180f;
                 	const float step = maxAngle / 6f;
                 	var currentAngle = 0f;
-			var currentStep = 0f;  	
+			var currentStep = 0f;
+			var cos = Math.Cos(currentAngle);
                         while (true)    
                         {
                                 // Validate the counter, break if no valid spot was found in previous loops
