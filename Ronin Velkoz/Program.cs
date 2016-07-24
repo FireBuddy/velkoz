@@ -41,6 +41,7 @@ namespace RoninVelkoz
         private static MissileClient QMissile;
         private static MissileClient Handle;
         public const float maxAngle = 96f;
+        public static Vector2 intersection;
         //public static Vector3 LastPosition = new Vector3(Handle.Position).To3D(); 
         public static float QTime = 0;
         /// <summary>
@@ -96,7 +97,7 @@ namespace RoninVelkoz
 			
 			var enemydirection = (CurrentTarget.Position.To2D() - Champion.Position.To2D()).Normalized();
                         var skillshotline = (enemydirection * 1100 * intcos);
-                        Vector2 intersection;
+
                         while (true)    
                         {
                                 // Validate the counter, break if no valid spot was found in previous loops
