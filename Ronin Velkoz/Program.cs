@@ -40,7 +40,7 @@ namespace RoninVelkoz
         private static List<Vector2> Perpendiculars { get; set; }
         private static MissileClient QMissile;
         private static MissileClient Handle;
-        private static Vector3 LastPosition = Handle.ServerPosition; 
+        public static Vector3 LastPosition = new Vector3(Handle.Position); 
         public static float QTime = 0;
         /// <summary>
         /// This event is triggered when the game loads
