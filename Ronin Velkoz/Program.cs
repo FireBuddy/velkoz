@@ -82,7 +82,7 @@ namespace RoninVelkoz
         
         public static void CastQ()
         {
-        	if (SpellsManager.Q.IsReady(Orbwalker.ActiveModes.Combo))
+        	if (SpellsManager.Q.IsReady())
                 {
                 }
 
