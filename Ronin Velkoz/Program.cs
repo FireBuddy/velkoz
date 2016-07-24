@@ -182,7 +182,7 @@ namespace RoninVelkoz
             if (Handle != null && Core.GameTickCount - QTime <= 1000)
 
             {
-                Chat.Print("Q detected");
+           //     Chat.Print("Q detected");
                 Direction = (Handle.EndPosition.To2D() - Handle.StartPosition.To2D()).Normalized();
                 Perpendiculars.Add(Direction.Perpendicular());
                 Perpendiculars.Add(Direction.Perpendicular2());
@@ -213,7 +213,7 @@ namespace RoninVelkoz
 	                if ( Prediction.Position.Collision.LinearMissileCollision(hero, startPos, endPos + 300, 4000, 100, 0))
                     	{
 
-                           // Chat.Print("Split");
+                            Chat.Print("Split");
                             SpellsManager.Q.Cast(Champion);
 
                            
