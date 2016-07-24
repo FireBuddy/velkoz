@@ -92,8 +92,8 @@ namespace RoninVelkoz
 			var intcos = (int)cos;
 			var CurrentTarget = TargetSelector.GetTarget(1500, DamageType.Magical);
 			var enemydirection = (CurrentTarget.Position.To2D() - Champion.Position.To2D()).Normalized();
-                        var intersection = (enemydirection * 1100 * intcos);
-                        Vector2 skillshotline;
+                        var skillshotline = (enemydirection * 1100 * intcos);
+                        Vector2 intersection;
                         while (true)    
                         {
                                 // Validate the counter, break if no valid spot was found in previous loops
@@ -115,11 +115,11 @@ namespace RoninVelkoz
                                 if (currentStep == 0)
                                 {
                                       currentStep = step;
-                                      skillshotline = CurrentTarget.Position.To2D();
+                                      intersection = CurrentTarget.Position.To2D();
 				}
 				else
                                 {
-                                    skillshotline = Champion.Position.To2D() + (intersection) * enemydirection.Rotated(currentAngle);
+                                    intersection = (skillshotline * enemydirection.Rotated(currentAngle));
 				}
 				
                                 
