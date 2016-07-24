@@ -83,7 +83,8 @@ namespace RoninVelkoz
         
         private static void QSplitter3(EventArgs args)
         {
-        	if (SpellsManager.Q.IsReady())
+        	var CurrentTarget = TargetSelector.GetTarget(1500, DamageType.Magical);
+        	if (SpellsManager.Q.IsReady() && CurrentTarget != null)
                 {
                 	const float maxAngle = 96f;
                 	const float step = maxAngle / 6f;
@@ -91,7 +92,7 @@ namespace RoninVelkoz
 			var currentStep = 0f;
 			var cos = Math.Cos(currentAngle);
 			var intcos = (int)cos;
-			var CurrentTarget = TargetSelector.GetTarget(1500, DamageType.Magical);
+			
 			var enemydirection = (CurrentTarget.Position.To2D() - Champion.Position.To2D()).Normalized();
                         var skillshotline = (enemydirection * 1100 * intcos);
                         Vector2 intersection;
