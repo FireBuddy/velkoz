@@ -66,8 +66,13 @@ namespace RoninVelkoz
         public static void OnDraw3(EventArgs args)
         {
              
+
              var startPos = Handle.Position.To2D();
              Circle.Draw(SharpDX.Color.Red, 100, 100, startPos.To3D());
+             foreach (var perpendicular in Perpendiculars)
+             {
+                 
+             }
         }
 
         public static void UltFollowMode()
