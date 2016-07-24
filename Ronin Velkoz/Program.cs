@@ -73,7 +73,7 @@ namespace RoninVelkoz
              Circle.Draw(SharpDX.Color.Red, 10, 50, startPos.To3D());
              foreach (var perpendicular in Perpendiculars)
              {
-                var endPos = Handle.Position.To2D() + 900 * perpendicular;
+                var endPos = Handle.Position.To2D() + 1000 * perpendicular;
                 Circle.Draw(SharpDX.Color.Yellow, 10, 60, endPos.To3D());
                  
              }
@@ -194,7 +194,7 @@ namespace RoninVelkoz
                     if (Handle != null)
                     {
                         var startPos = Handle.Position.To2D();
-                        var endPos = Handle.Position.To2D() + 900 * perpendicular;
+                        var endPos = Handle.Position.To2D() + 1000 * perpendicular;
 
                         var collisionObjects = EntityManager.Heroes.Enemies.Where(it => it.IsValidTarget(1500));
                        // if (collisionObjects.Count() >= 1)
