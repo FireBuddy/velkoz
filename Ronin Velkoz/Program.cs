@@ -90,7 +90,9 @@ namespace RoninVelkoz
 			var currentStep = 0f;
 			var cos = Math.Cos(currentAngle);
 			var CurrentTarget = TargetSelector.GetTarget(1500, DamageType.Magical);
-			Direction = (CurrentTarget.Position.To2D() - Champion.Position.To2D()).Normalized();
+			var direction = (CurrentTarget.Position.To2D() - Champion.Position.To2D()).Normalized();
+			var endPos = Champion.Position.To2D() + 1100 * direction.Rotated(currentAngle); 
+                        //Vector2 checkPoint;
                         while (true)    
                         {
                                 // Validate the counter, break if no valid spot was found in previous loops
@@ -109,6 +111,7 @@ namespace RoninVelkoz
                                 {
                                     currentAngle = -currentAngle;
                                 }
+                                
                         }        
                                 
 
