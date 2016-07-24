@@ -216,7 +216,7 @@ namespace RoninVelkoz
                             Chat.Print("Split");
                             SpellsManager.Q.Cast();
 
-                            Handle = null;
+                           
                         }
                         }
                        
