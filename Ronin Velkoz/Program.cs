@@ -88,12 +88,12 @@ namespace RoninVelkoz
                 	const float step = maxAngle / 6f;
                 	var currentAngle = 0f;
 			var currentStep = 0f;
-			var costom = Math.Cos(currentAngle);
-			var currentvalue = (int)costom;
+			var cos = Math.Cos(currentAngle);
+			var intcos = (int)cos;
 			var CurrentTarget = TargetSelector.GetTarget(1500, DamageType.Magical);
 			var direction = (CurrentTarget.Position.To2D() - Champion.Position.To2D()).Normalized();
+                        Var intersection = (direction * 1100 * intcos);
                         Vector2 checkPoint;
-                        var newvector = new Vector2(direction.X * currentvalue, direction.Y * 2);
                         while (true)    
                         {
                                 // Validate the counter, break if no valid spot was found in previous loops
