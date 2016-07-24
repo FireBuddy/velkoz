@@ -199,12 +199,11 @@ namespace RoninVelkoz
                             
                         }
                         
-                        var colliding = collisionObjects
-                            .Where(o => Prediction.Position.Collision.LinearMissileCollision(o, startPos, endPos, MissileSpeed, SpellWidth, CastDelay, (int)o.BoundingRadius))
-                                .OrderBy(o => o.Distance(Champion, true)).FirstOrDefault();
-
-                        if (colliding != null)
+                        foreach (var hero in collisionObjects)
                         {
+	                    if ( Prediction.Position.Collision.LinearMissileCollision(hero, startPos, endPos, 2000, 200, 0) )
+                    	{
+
                             Chat.Print("Split");
                             SpellsManager.Q.Cast();
 
