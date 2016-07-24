@@ -93,7 +93,7 @@ namespace RoninVelkoz
 			direction = (CurrentTarget.Position.To2D() - Champion.Position.To2D()).Normalized();
                         Vector2 checkPoint;
                         Vector2 checkpoint2;
-                        checkpoint2 = new vector(cos * direction.x, cos * direction.y); 
+                        var x = (direction.x);
                         while (true)    
                         {
                                 // Validate the counter, break if no valid spot was found in previous loops
