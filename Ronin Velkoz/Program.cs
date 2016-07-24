@@ -182,6 +182,7 @@ namespace RoninVelkoz
 
             {
                 Chat.Print("Q detected");
+                Direction = (Handle.EndPosition.To2D() - Handle.StartPosition.To2D()).Normalized();
                 foreach (var perpendicular in Perpendiculars)
                 {
                     if (Handle != null)
