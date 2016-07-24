@@ -69,11 +69,11 @@ namespace RoninVelkoz
              if (Champion != null)
              {
              var startPos = Handle.Position.To2D();
-             Circle.Draw(SharpDX.Color.Red, 50, 100, startPos.To3D());
+             Circle.Draw(SharpDX.Color.Red, 10, 50, startPos.To3D());
              foreach (var perpendicular in Perpendiculars)
              {
                 var endPos = Handle.Position.To2D() + 900 * perpendicular;
-                Circle.Draw(SharpDX.Color.Red, 50, 100, endPos.To3D());
+                Circle.Draw(SharpDX.Color.Yellow, 10, 60, endPos.To3D());
                  
              }
              }
