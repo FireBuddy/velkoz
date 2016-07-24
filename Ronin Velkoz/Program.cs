@@ -90,7 +90,7 @@ namespace RoninVelkoz
 			var currentStep = 0f;
 			var cos = Math.Cos(currentAngle);
 			var collisionObjects = EntityManager.Heroes.Enemies.Where(it => it.IsValidTarget(1500));
-			Direction = (Handle.EndPosition.To2D() - Handle.StartPosition.To2D()).Normalized();
+			Direction = (Handle.EndPosition.To2D() - Player.Instance.Position).Normalized();
                         while (true)    
                         {
                                 // Validate the counter, break if no valid spot was found in previous loops
