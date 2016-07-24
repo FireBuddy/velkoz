@@ -66,7 +66,7 @@ namespace RoninVelkoz
         public static void OnDraw3(EventArgs args)
         {
              
-             var startPos = Handle.Position.To2D();
+             var startPos = Handle.Position.To3D();
             // Circle.Draw(SharpDX.Color.Red, 100, 100, startPos);
         }
 
