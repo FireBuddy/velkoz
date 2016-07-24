@@ -89,7 +89,7 @@ namespace RoninVelkoz
                 	var currentAngle = 0f;
 			var currentStep = 0f;
 			var costom = Math.Cos(currentAngle);
-			var currentvalue = costom;
+			var currentvalue = costom(int);
 			var CurrentTarget = TargetSelector.GetTarget(1500, DamageType.Magical);
 			var direction = (CurrentTarget.Position.To2D() - Champion.Position.To2D()).Normalized();
                         Vector2 checkPoint;
