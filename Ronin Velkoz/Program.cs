@@ -59,6 +59,7 @@ namespace RoninVelkoz
             Gapcloser.OnGapcloser += GapCloserMode;
             Game.OnUpdate += QSplitter;
             Game.OnUpdate += QSplitter2;
+            Game.OnUpdate += QChecker;
             GameObject.OnCreate += Obj_AI_Base_OnCreate;
             GameObject.OnCreate += SpellsManager.OnCreate;
             Drawing.OnDraw += OnDraw3;
@@ -80,9 +81,10 @@ namespace RoninVelkoz
              }
         }
         
-        public static void CastQ()
+        public static void QChecker(EventArgs args)
         {
-        	if (SpellsManager.Q.IsReady())
+        	var CurrentTargett = TargetSelector.GetTarget(1500, DamageType.Magical);
+        	if (SpellsManager.Q.IsReady() && CurrentTargett != null)
                 {
                 	const float maxAngle = 96f;
                 	const float step = maxAngle / 6f;
@@ -90,8 +92,7 @@ namespace RoninVelkoz
 			var currentStep = 0f;
 			var cos = Math.Cos(currentAngle);
 			var intcos = (int)cos;
-			var CurrentTarget = TargetSelector.GetTarget(1500, DamageType.Magical);
-			var enemydirection = (CurrentTarget.Position.To2D() - Champion.Position.To2D()).Normalized();
+			var enemydirection = (CurrentTargett.Position.To2D() - Champion.Position.To2D()).Normalized();
                         var skillshotline = (enemydirection * 1100 * intcos);
                         Vector2 intersection;
                         while (true)    
