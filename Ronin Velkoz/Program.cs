@@ -214,7 +214,7 @@ namespace RoninVelkoz
                     	{
 
                             Chat.Print("Split");
-                            SpellsManager.Q.Cast();
+                            SpellsManager.Q.Cast(Champion);
 
                            
                         }
