@@ -92,7 +92,7 @@ namespace RoninVelkoz
 			var CurrentTarget = TargetSelector.GetTarget(1500, DamageType.Magical);
 			var direction = (CurrentTarget.Position.To2D() - Champion.Position.To2D()).Normalized();
 			var endPos = Champion.Position.To2D() + 1100 * direction.Rotated(currentAngle); 
-                        //Vector2 checkPoint;
+                        Vector2 checkPoint;
                         while (true)    
                         {
                                 // Validate the counter, break if no valid spot was found in previous loops
