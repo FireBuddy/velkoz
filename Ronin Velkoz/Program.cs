@@ -40,6 +40,7 @@ namespace RoninVelkoz
         private static List<Vector2> Perpendiculars { get; set; }
         private static MissileClient QMissile;
         private static MissileClient Handle;
+        public static float maxAngle = 96f;
         //public static Vector3 LastPosition = new Vector3(Handle.Position).To3D(); 
         public static float QTime = 0;
         /// <summary>
@@ -78,7 +79,7 @@ namespace RoninVelkoz
                 Circle.Draw(SharpDX.Color.Yellow, 10, 60, endPos.To3D());
                  
              }
-             Drawing.DrawLine(Champion.Position.WorldToScreen(), intersection.Position.WorldToScreen(), 2, System.Drawing.Color.White);
+          //   Drawing.DrawLine(Champion.Position.WorldToScreen(), intersection.Position.WorldToScreen(), 2, System.Drawing.Color.White);
              }
         }
         
@@ -87,7 +88,6 @@ namespace RoninVelkoz
         	var CurrentTarget = TargetSelector.GetTarget(1500, DamageType.Magical);
         	if (SpellsManager.Q.IsReady() && CurrentTarget != null)
                 {
-                	const float maxAngle = 96f;
                 	const float step = maxAngle / 6f;
                 	var currentAngle = 0f;
 			var currentStep = 0f;
