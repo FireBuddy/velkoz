@@ -79,6 +79,14 @@ namespace RoninVelkoz
              }
              }
         }
+        
+        public static void CastQ()
+        {
+        	if (SpellsManager.Q.IsReady(Orbwalker.ActiveModes.Combo))
+                {
+                }
+
+        }
 
         public static void UltFollowMode()
         {
