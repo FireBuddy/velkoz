@@ -115,10 +115,10 @@ namespace RoninVelkoz
                                     currentStep = step;
                                     checkPoint = CurrentTarget.Position;
 				}
-				else
-                                {
-                                    checkPoint = Champion.Position + 1100 * direction.Rotated(currentAngle);
-				}
+			//	else
+                        //        {
+                        //            checkPoint = Champion.Position + 1100 * direction.Rotated(currentAngle);
+			//	}
 				
                                 
                         }        
