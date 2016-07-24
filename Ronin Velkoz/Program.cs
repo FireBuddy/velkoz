@@ -113,7 +113,7 @@ namespace RoninVelkoz
                                 if (currentStep == 0)
                                 {
                                     currentStep = step;
-                                    checkPoint = CurrentTarget.ServerPosition;
+                                    checkPoint = CurrentTarget.ServerPosition.To2D();
 				}
 			//	else
                         //        {
