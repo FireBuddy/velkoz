@@ -119,6 +119,8 @@ namespace RoninVelkoz
                                 {
                                     checkPoint = Champion.Position.To2D() + 1100 * direction.Rotated(currentAngle);
 				}
+				var intersection =  CurrentTarget.Position.To2D() * cos; 
+				
 				
                                 
                         }        
