@@ -213,7 +213,7 @@ namespace RoninVelkoz
 	                if ( Prediction.Position.Collision.LinearMissileCollision(hero, startPos, endPos + 300, 2000, 100, 2000))
                     	{
 
-                            Chat.Print("Split");
+                           // Chat.Print("Split");
                             SpellsManager.Q.Cast(Champion);
 
                            
