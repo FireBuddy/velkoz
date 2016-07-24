@@ -90,19 +90,7 @@ namespace RoninVelkoz
 		var currentStep = 0f;  	
 		while(true)
 		{
-			if (currentStep > maxAngle && currentAngle < 0)
-	                {
-	                   break;
-	                }
-	                if ((currentAngle == 0 || currentAngle < 0) && currentStep != 0)
-	                {
-	                   currentAngle = (currentStep) * (float) Math.PI / 180;
-	                   currentStep += step;
-	                }
-	                else if (currentAngle > 0)
-	                {
-	                   currentAngle = -currentAngle;
-	                }
+
                 }
 
 
