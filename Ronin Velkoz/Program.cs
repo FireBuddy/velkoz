@@ -92,7 +92,7 @@ namespace RoninVelkoz
 			var CurrentTarget = TargetSelector.GetTarget(1500, DamageType.Magical);
 			direction = (CurrentTarget.Position.To2D() - Champion.Position.To2D()).Normalized();
                         Vector2 checkPoint;
-                        vector2 checkpoint2;
+                        Vector2 checkpoint2;
                         checkpoint2 = ((CurrentTarget.Position.Distance(Champion.Position) * cos) * direction); 
                         while (true)    
                         {
