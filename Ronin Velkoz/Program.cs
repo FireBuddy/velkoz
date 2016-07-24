@@ -92,7 +92,7 @@ namespace RoninVelkoz
 			var intcos = (int)cos;
 			var CurrentTarget = TargetSelector.GetTarget(1500, DamageType.Magical);
 			var direction = (CurrentTarget.Position.To2D() - Champion.Position.To2D()).Normalized();
-                        Var intersection = (direction * 1100 * intcos);
+                        var intersection = (direction * 1100 * intcos);
                         Vector2 checkPoint;
                         while (true)    
                         {
