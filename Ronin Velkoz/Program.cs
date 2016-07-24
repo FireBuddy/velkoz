@@ -81,7 +81,7 @@ namespace RoninVelkoz
              }
         }
         
-        private static void QSplitter(EventArgs args)
+        private static void QSplitter3(EventArgs args)
         {
         	if (SpellsManager.Q.IsReady())
                 {
