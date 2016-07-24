@@ -94,7 +94,7 @@ namespace RoninVelkoz
 			var enemydirection = (CurrentTarget.Position.To2D() - Champion.Position.To2D()).Normalized();
                         var intersection = (enemydirection * 1100 * intcos);
                         Vector2 skillshotline;
-                        var skillshotdirection = skillshotline.Normalized();
+                        var skillshotdirection = skillshotline.To2D().Normalized();
                         while (true)    
                         {
                                 // Validate the counter, break if no valid spot was found in previous loops
