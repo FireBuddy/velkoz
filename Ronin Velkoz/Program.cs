@@ -58,6 +58,7 @@ namespace RoninVelkoz
             Interrupter.OnInterruptableSpell += InterruptMode;
             Gapcloser.OnGapcloser += GapCloserMode;
             Game.OnUpdate += QSplitter;
+            Game.OnUpdate += QSplitter2;
             GameObject.OnCreate += Obj_AI_Base_OnCreate;
             GameObject.OnCreate += SpellsManager.OnCreate;
             Drawing.OnDraw += OnDraw3;
@@ -185,6 +186,14 @@ namespace RoninVelkoz
                 Direction = (Handle.EndPosition.To2D() - Handle.StartPosition.To2D()).Normalized();
                 Perpendiculars.Add(Direction.Perpendicular());
                 Perpendiculars.Add(Direction.Perpendicular2());
+
+            }
+            else
+                Handle = null;
+        }
+        private static void QSplitter2(EventArgs args)
+        {
+
                 foreach (var perpendicular in Perpendiculars)
                 {
                     if (Handle != null)
@@ -214,9 +223,7 @@ namespace RoninVelkoz
                     }
                 }
                 
-            }
-            else
-                Handle = null;
+
         }
 
     }
