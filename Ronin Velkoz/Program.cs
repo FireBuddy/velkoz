@@ -84,6 +84,10 @@ namespace RoninVelkoz
         {
         	if (SpellsManager.Q.IsReady())
                 {
+                const float maxAngle = 180f;
+                const float step = maxAngle / 6f;
+                var currentAngle = 0f;
+		var currentStep = 0f;  	
                 }
 
         }
