@@ -101,6 +101,7 @@ namespace RoninVelkoz
                 {
                    currentAngle = -currentAngle;
                 }
+                }
 
 
         }
