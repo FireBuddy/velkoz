@@ -93,7 +93,7 @@ namespace RoninVelkoz
 			var CurrentTarget = TargetSelector.GetTarget(1500, DamageType.Magical);
 			var enemydirection = (CurrentTarget.Position.To2D() - Champion.Position.To2D()).Normalized();
                         var intersection = (enemydirection * 1100 * intcos);
-                        var skillshotdirection = skillshotline.Normalized();
+                        //var skillshotdirection = skillshotline.Normalized();
                         Vector2 skillshotline;
                         while (true)    
                         {
