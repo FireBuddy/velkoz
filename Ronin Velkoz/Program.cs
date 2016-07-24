@@ -112,13 +112,13 @@ namespace RoninVelkoz
                                 }
                                 if (currentStep == 0)
                                 {
-                         //           currentStep = step;
-                         //           checkPoint = CurrentTarget.Position.To2D();
+                                      currentStep = step;
+                                      checkPoint = CurrentTarget.Position.To2D();
 				}
-			//	else
-                        //        {
-                        //            checkPoint = Champion.Position + 1100 * direction.Rotated(currentAngle);
-			//	}
+				else
+                                {
+                                    checkPoint = Champion.Position.To2D() + 1100 * direction.Rotated(currentAngle);
+				}
 				
                                 
                         }        
