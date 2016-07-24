@@ -89,9 +89,12 @@ namespace RoninVelkoz
                 	var currentAngle = 0f;
 			var currentStep = 0f;  	
 			while(true)
-			{
+                        {
+                            break;
+	                }
+                }        
 
-                	}
+
 
 
         }
