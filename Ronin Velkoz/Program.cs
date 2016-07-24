@@ -81,7 +81,7 @@ namespace RoninVelkoz
              }
         }
         
-        public static void QChecker(EventArgs args)
+        private static void QChecker(EventArgs args)
         {
         	var CurrentTargett = TargetSelector.GetTarget(1500, DamageType.Magical);
         	if (SpellsManager.Q.IsReady() && CurrentTargett != null)
