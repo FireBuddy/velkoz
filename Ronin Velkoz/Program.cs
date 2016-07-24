@@ -88,12 +88,10 @@ namespace RoninVelkoz
                 	const float step = maxAngle / 6f;
                 	var currentAngle = 0f;
 			var currentStep = 0f;
-			var cos =  Math.Cos(currentAngle);
+			var cos = Math.Cos(currentAngle);
 			var CurrentTarget = TargetSelector.GetTarget(1500, DamageType.Magical);
-			direction = (CurrentTarget.Position.To2D() - Champion.Position.To2D()).Normalized();
+			var direction = (CurrentTarget.Position.To2D() - Champion.Position.To2D()).Normalized();
                         Vector2 checkPoint;
-                        Vector2 checkpoint2;
-                        //var x = new Vector2(checkpoint.X, checkpoint.Y);
                         while (true)    
                         {
                                 // Validate the counter, break if no valid spot was found in previous loops
@@ -114,15 +112,13 @@ namespace RoninVelkoz
                                 }
                                 if (currentStep == 0)
                                 {
-                                    currentStep = step;
-                                //    checkPoint = CurrentTarget.Position.To2D();
+                         //           currentStep = step;
+                         //           checkPoint = CurrentTarget.Position.To2D();
 				}
-				else
-                                {
-                                //    checkPoint = Champion.Position.To2D() + 1100 * direction.Rotated(currentAngle);
-				}
-				
-				
+			//	else
+                        //        {
+                        //            checkPoint = Champion.Position + 1100 * direction.Rotated(currentAngle);
+			//	}
 				
                                 
                         }        
