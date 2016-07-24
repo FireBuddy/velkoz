@@ -201,13 +201,14 @@ namespace RoninVelkoz
                         
                         foreach (var hero in collisionObjects)
                         {
-	                if ( Prediction.Position.Collision.LinearMissileCollision(hero, startPos, endPos, 2000, 200, 0) >= 100 )
+	                if ( Prediction.Position.Collision.LinearMissileCollision(hero, startPos, endPos, 2000, 200, 0))
                     	{
 
                             Chat.Print("Split");
                             SpellsManager.Q.Cast();
 
                             Handle = null;
+                        }
                         }
                        
                     }
