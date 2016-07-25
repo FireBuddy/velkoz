@@ -81,7 +81,7 @@ namespace RoninVelkoz
                 Circle.Draw(SharpDX.Color.Yellow, 10, 60, endPos.To3D());
                  
              }
-               Drawing.DrawLine(Champion.Position.WorldToScreen(), intersection.WorldToScreen(), 2, System.Drawing.Color.White);
+               Drawing.DrawLine(Champion.Position.WorldToScreen(), intersection2.WorldToScreen(), 2, System.Drawing.Color.White);
              }
         }
         
