@@ -42,7 +42,7 @@ namespace RoninVelkoz
         private static MissileClient Handle;
         public const float maxAngle = 96f;
         public static Vector3 intersection;
-        public static Vector3 intersection2 = intersection ;
+        public static Vector3 intersection2 = intersection.To3D();
         //public static Vector3 LastPosition = new Vector3(Handle.Position).To3D(); 
         public static float QTime = 0;
         /// <summary>
@@ -78,9 +78,7 @@ namespace RoninVelkoz
              {
 
 
-	             Drawing.DrawLine(Champion.Position.WorldToScreen(), intersection2.WorldToScreen(), 2, System.Drawing.Color.White);
-	             Drawing.DrawLine(CurrentTarget.Position.WorldToScreen(), intersection2.WorldToScreen(), 2, System.Drawing.Color.White);
-
+		     Circle.Draw(SharpDX.Color.Blue, 100, 100, intersection);
 	             Circle.Draw(SharpDX.Color.Blue, 100, 100, enemydirection);
 	             Circle.Draw(SharpDX.Color.Red, 10, 50, startPos.To3D());
 	             foreach (var perpendicular in Perpendiculars)
