@@ -280,7 +280,7 @@ namespace RoninVelkoz
                     	{
 
 
-                            SpellsManager.Q.Cast(Champion);
+                           // SpellsManager.Q.Cast(Champion);
 
                            
                         }
