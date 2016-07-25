@@ -149,19 +149,7 @@ namespace RoninVelkoz
             }
         }
 
-        public static void OnCreate(GameObject sender, EventArgs args)
-        {
-            // Check if the sender is a MissleClient
-            var missile = sender as MissileClient;
-            if (missile != null && missile.SpellCaster.IsMe && missile.SData.Name == "VelkozQMissile")
-            {
-                // Apply the needed values
-                Handle = missile;
-                Direction = (missile.EndPosition.To2D() - missile.StartPosition.To2D()).Normalized();
-                Perpendiculars.Add(Direction.Perpendicular());
-                Perpendiculars.Add(Direction.Perpendicular2());
-            }
-        }
+
         public static float RDamage()
         {
             return new float[] { 0, 500, 700, 900 }[R.Level] + 0.5f * Champion.FlatMagicDamageMod;
