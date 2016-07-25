@@ -68,7 +68,7 @@ namespace RoninVelkoz
             Drawing.OnDraw += OnDraw3;
         }
         
-        public static void OnDraw3(EventArgs args)
+        private static void OnDraw3(EventArgs args)
         {
              
              if (Champion != null && SpellsManager.Q.IsReady())
