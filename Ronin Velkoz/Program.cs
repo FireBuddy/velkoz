@@ -237,7 +237,7 @@ namespace RoninVelkoz
 
                     Chat.Print("oncreat");
                     
-                    //Handle = missile;
+                    Handle = missile;
                     QTime = Core.GameTickCount;
                     }
             }
