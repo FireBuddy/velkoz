@@ -262,35 +262,37 @@ namespace RoninVelkoz
         }
         private static void QSplitter2(EventArgs args)
         {
-
-                foreach (var perpendicular in Perpendiculars)
-                {
-                    if (Handle != null)
-                    {
-                        var startPos = Handle.Position.To2D();
-                        var endPos = Handle.Position.To2D() + 1100 * perpendicular;
-
-                        var collisionObjects = EntityManager.Heroes.Enemies.Where(it => it.IsValidTarget(1500));
-                       // if (collisionObjects.Count() >= 1)
-                     //   {
-                      //      Chat.Print("enemy");
-                            
-                     //   }
-                        
-                        foreach (var hero in collisionObjects)
-                        {
-	                if ( Prediction.Position.Collision.LinearMissileCollision(hero, startPos, endPos, 2000, 100, 0))
-                    	{
-
-
-                           SpellsManager.Q.Cast(Champion);
-
-                           
-                        }
-                        }
-                       
-                    }
-                }
+		if (Handle != null)
+		{
+	                foreach (var perpendicular in Perpendiculars)
+	                {
+	                    if (Handle != null)
+	                    {
+	                        var startPos = Handle.Position.To2D();
+	                        var endPos = Handle.Position.To2D() + 1100 * perpendicular;
+	
+	                        var collisionObjects = EntityManager.Heroes.Enemies.Where(it => it.IsValidTarget(1500));
+	                       // if (collisionObjects.Count() >= 1)
+	                     //   {
+	                      //      Chat.Print("enemy");
+	                            
+	                     //   }
+	                        
+	                        foreach (var hero in collisionObjects)
+	                        {
+		                if ( Prediction.Position.Collision.LinearMissileCollision(hero, startPos, endPos, 2000, 100, 0))
+	                    	{
+	
+	
+	                           SpellsManager.Q.Cast(Champion);
+	
+	                           
+	                        }
+	                        }
+	                       
+	                    }
+	                }
+		}
                 
 
         }
