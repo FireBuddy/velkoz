@@ -64,7 +64,7 @@ namespace RoninVelkoz
             Game.OnUpdate += QSplitter2;
             Game.OnUpdate += OnTick;
             GameObject.OnCreate += Obj_AI_Base_OnCreate;
-            GameObject.OnCreate += SpellsManager.OnCreate;
+            //GameObject.OnCreate += SpellsManager.OnCreate;
             Drawing.OnDraw += OnDraw3;
         }
         
