@@ -94,10 +94,10 @@ namespace RoninVelkoz
         
         private static void OnTick(EventArgs args)
         {
-        	var CurrentTarget = TargetSelector.GetTarget(6000, DamageType.Magical);
+        	var CurrentTarget = TargetSelector.GetTarget(1500, DamageType.Magical);
         	if (CurrentTarget != null)
                 {
-                	const float step = maxAngle / 6f;
+                	const float step = maxAngle / 12f;
                 	var currentAngle = 0f;
 			var currentStep = 0f;
 			var cos = Math.Cos(currentAngle);
@@ -124,6 +124,7 @@ namespace RoninVelkoz
                                 {
                                     currentAngle = -currentAngle;
                                 }
+                                var collisionObjects = EntityManager.MinionsAndMonsters.GetLaneMinions.Where(it => it.IsValidTarget(1500));
                                 if (currentStep == 0)
                                 {
                                       currentStep = step;
