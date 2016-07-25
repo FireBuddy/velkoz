@@ -124,7 +124,8 @@ namespace RoninVelkoz
                                 {
                                     currentAngle = -currentAngle;
                                 }
-                                var collisionObjects = EntityManager.MinionsAndMonsters.GetLaneMinions.Where(it => it.IsValidTarget(1500));
+                                var collisionObjects = EntityManager.MinionsAndMonsters.GetLaneMinions(EntityManager.UnitTeam.Both,
+				Champion.Position,1500, false);
                                 if (currentStep == 0)
                                 {
                                       currentStep = step;
