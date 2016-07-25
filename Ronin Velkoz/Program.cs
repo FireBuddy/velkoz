@@ -231,7 +231,7 @@ namespace RoninVelkoz
          //   if (IsWaitingMissile)
             {
                 Perpendiculars = new List<Vector2>();
-                var missile = (MissileClient)args;
+                var missile = args;
                 if (missile.SData.Name != null && missile.SData.Name == "VelkozQMissile")
                     {
 
