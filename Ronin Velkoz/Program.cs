@@ -280,7 +280,7 @@ namespace RoninVelkoz
 	                        
 	                        foreach (var hero in collisionObjects)
 	                        {
-		                if ( Prediction.Position.Collision.LinearMissileCollision(hero, startPos, endPos, 2100, 60, 150))
+		                if ( Prediction.Position.Collision.LinearMissileCollision(hero, startPos, endPos, 1900, 60, 50))
 	                    	{
 	
 	
