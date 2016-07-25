@@ -128,12 +128,12 @@ namespace RoninVelkoz
                                 if (currentStep == 0)
                                 {
                                       currentStep = step;
-                                      intersection = CurrentTarget.ServerPosition.To2D();
+                                      intersection = CurrentTarget.ServerPosition;
 				}
 				else
                                 {
                                    // intersection = (skillshotline * enemydirection.Rotated(currentAngle));
-                                     intersection = CurrentTarget.ServerPosition.To2D();
+                                     intersection = CurrentTarget.ServerPosition;
 				}
 				
 				
