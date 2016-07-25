@@ -127,7 +127,7 @@ namespace RoninVelkoz
                                 var collisionObjects = EntityManager.MinionsAndMonsters.GetLaneMinions(EntityManager.UnitTeam.Both,
 				Champion.Position,1500, false);
                                 foreach (var minion in collisionObjects)
-                                if(Prediction.Position.Collision.LinearMissileCollision(minion, Champion.Position.To2D(), intersection.To2D(), 1300, 100, 250))
+                                if(!Prediction.Position.Collision.LinearMissileCollision(minion, Champion.Position.To2D(), intersection.To2D(), 1300, 100, 250) && !Prediction.Position.Collision.LinearMissileCollision(minion, intersection.To2D(), CurrentTarget.Position.To2D() , 1300, 100, 250))
 	                        { 
 	                                if (currentStep == 0)
 	                                {
