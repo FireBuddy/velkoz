@@ -228,13 +228,13 @@ namespace RoninVelkoz
 
         public static void Obj_AI_Base_OnCreate(GameObject sender, EventArgs args)
         {
-            if (sender.IsAlly && sender != null)
+            if (sender.IsAlly && missile.SData.Name == "VelkozQMissile")
             {
                 Perpendiculars = new List<Vector2>();
                 var missile = (MissileClient)sender;
                 if (missile.SData.Name != null && missile.SData.Name == "VelkozQMissile")
                     {
-                    QMissile = missile;
+
                     Chat.Print("oncreat");
                     
                     Handle = missile;
