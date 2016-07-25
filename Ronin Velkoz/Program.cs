@@ -42,6 +42,7 @@ namespace RoninVelkoz
         private static MissileClient Handle;
         public const float maxAngle = 96f;
         public static Vector2 intersection;
+        public static Vector3 intersection2 = intersection.To3D();
         //public static Vector3 LastPosition = new Vector3(Handle.Position).To3D(); 
         public static float QTime = 0;
         /// <summary>
@@ -80,7 +81,7 @@ namespace RoninVelkoz
                 Circle.Draw(SharpDX.Color.Yellow, 10, 60, endPos.To3D());
                  
              }
-               Drawing.DrawLine(Champion.Position.WorldToScreen(), intersection.WorldToScreen(), 2, System.Drawing.Color.White);
+              // Drawing.DrawLine(Champion.Position.WorldToScreen(), intersection.WorldToScreen(), 2, System.Drawing.Color.White);
              }
         }
         
