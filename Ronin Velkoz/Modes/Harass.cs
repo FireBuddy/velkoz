@@ -38,7 +38,7 @@ namespace RoninVelkoz.Modes
                 Q.Cast(qtarget);
             }
 
-            if (HarassMenu.GetCheckBoxValue("eUse") && E.IsReady() && etarget.IsValidTarget(SpellsManager.E.Range) && etarget.HasBuffOfType(BuffType.Slow))
+            if (HarassMenu.GetCheckBoxValue("eUse") && E.IsReady() && etarget.IsValidTarget(SpellsManager.E.Range) && !etarget.CanMove)
             {
                 E.Cast(etarget);
             }
