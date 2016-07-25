@@ -75,7 +75,7 @@ namespace RoninVelkoz
 	    // var enemydirection = CurrentTarget.ServerPosition;
 	     var startPos = Handle.Position.To2D();
              var intertwoD = intersection.To2D();
-             if (Champion != null && SpellsManager.Q.IsReady())
+             if (SpellsManager.Q.IsReady())
              {
 
 
@@ -95,7 +95,7 @@ namespace RoninVelkoz
         private static void OnTick(EventArgs args)
         {
         	var CurrentTarget = TargetSelector.GetTarget(6000, DamageType.Magical);
-        	if (SpellsManager.Q.IsReady() && CurrentTarget != null)
+        	if (CurrentTarget != null)
                 {
                 	const float step = maxAngle / 6f;
                 	var currentAngle = 0f;
