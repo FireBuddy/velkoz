@@ -73,17 +73,18 @@ namespace RoninVelkoz
              
              if (Champion != null)
              {
-             Drawing.DrawLine(Champion.Position.WorldToScreen(), intersection2.WorldToScreen(), 2, System.Drawing.Color.White);
-             Drawing.DrawLine(CurrentTarget.Position.WorldToScreen(), intersection2.WorldToScreen(), 2, System.Drawing.Color.White);
-             var startPos = Handle.Position.To2D();
-             var CurrentTarget = TargetSelector.GetTarget(1500, DamageType.Magical);
-             Circle.Draw(SharpDX.Color.Red, 10, 50, startPos.To3D());
-             foreach (var perpendicular in Perpendiculars)
-             {
-                var endPos = Handle.Position.To2D() + 1000 * perpendicular;
-                Circle.Draw(SharpDX.Color.Yellow, 10, 60, endPos.To3D());
-                 
-             }
+	             var CurrentTarget = TargetSelector.GetTarget(1500, DamageType.Magical);
+	             Drawing.DrawLine(Champion.Position.WorldToScreen(), intersection2.WorldToScreen(), 2, System.Drawing.Color.White);
+	             Drawing.DrawLine(CurrentTarget.Position.WorldToScreen(), intersection2.WorldToScreen(), 2, System.Drawing.Color.White);
+	             var startPos = Handle.Position.To2D();
+
+	             Circle.Draw(SharpDX.Color.Red, 10, 50, startPos.To3D());
+	             foreach (var perpendicular in Perpendiculars)
+	             {
+	                var endPos = Handle.Position.To2D() + 1000 * perpendicular;
+	                Circle.Draw(SharpDX.Color.Yellow, 10, 60, endPos.To3D());
+	                 
+        	     }
                
              }
         }
