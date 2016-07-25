@@ -75,8 +75,7 @@ namespace RoninVelkoz
 	    // var enemydirection = CurrentTarget.ServerPosition;
 	     var startPos = Handle.Position.To2D();
              var intertwoD = intersection.To2D();
-             if (SpellsManager.Q.IsReady())
-             {
+
 
 
 		     Circle.Draw(SharpDX.Color.White, 10, 50, intertwoD.To3D());
@@ -89,7 +88,7 @@ namespace RoninVelkoz
 	                 
         	   //  }
                
-             }
+             
         }
         
         private static void OnTick(EventArgs args)
