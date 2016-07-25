@@ -93,7 +93,7 @@ namespace RoninVelkoz
         
         private static void QSplitter3(EventArgs args)
         {
-        	var CurrentTarget = TargetSelector.GetTarget(1500, DamageType.Magical);
+        	var CurrentTarget = TargetSelector.GetTarget(6000, DamageType.Magical);
         	if (SpellsManager.Q.IsReady() && CurrentTarget != null)
                 {
                 	const float step = maxAngle / 6f;
