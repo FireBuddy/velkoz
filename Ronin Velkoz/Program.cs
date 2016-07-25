@@ -81,13 +81,13 @@ namespace RoninVelkoz
 
 		     Circle.Draw(SharpDX.Color.White, 10, 50, intertwoD.To3D());
 	            // Circle.Draw(SharpDX.Color.Blue, 100, 100, enemydirection);
-	             Circle.Draw(SharpDX.Color.Red, 10, 50, startPos.To3D());
-	             foreach (var perpendicular in Perpendiculars)
-	             {
-	                var endPos = Handle.Position.To2D() + 1000 * perpendicular;
-	                Circle.Draw(SharpDX.Color.Yellow, 10, 60, endPos.To3D());
+	         //    Circle.Draw(SharpDX.Color.Red, 10, 50, startPos.To3D());
+	           //  foreach (var perpendicular in Perpendiculars)
+	          //   {
+	          //      var endPos = Handle.Position.To2D() + 1000 * perpendicular;
+	           //     Circle.Draw(SharpDX.Color.Yellow, 10, 60, endPos.To3D());
 	                 
-        	     }
+        	   //  }
                
              }
         }
