@@ -78,7 +78,7 @@ namespace RoninVelkoz
              {
 
 
-		     Circle.Draw(SharpDX.Color.White, 100, 100, intersection);
+		     Circle.Draw(SharpDX.Color.White, 200, 200, intersection);
 	             Circle.Draw(SharpDX.Color.Blue, 100, 100, enemydirection);
 	             Circle.Draw(SharpDX.Color.Red, 10, 50, startPos.To3D());
 	             foreach (var perpendicular in Perpendiculars)
