@@ -77,7 +77,6 @@ namespace RoninVelkoz
 	             Drawing.DrawLine(Champion.Position.WorldToScreen(), intersection2.WorldToScreen(), 2, System.Drawing.Color.White);
 	             Drawing.DrawLine(CurrentTarget.Position.WorldToScreen(), intersection2.WorldToScreen(), 2, System.Drawing.Color.White);
 	             var startPos = Handle.Position.To2D();
-
 	             Circle.Draw(SharpDX.Color.Red, 10, 50, startPos.To3D());
 	             foreach (var perpendicular in Perpendiculars)
 	             {
