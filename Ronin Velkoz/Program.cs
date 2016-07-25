@@ -134,8 +134,8 @@ namespace RoninVelkoz
 					}
 					else
 	                                {
-	                                     Chat.Print("intersection");
-	                                     intersection = skillshotline.To3D();
+				            intersection = skillshotline.To3D();
+				            break;
 					}
 	                        }
 			}        
