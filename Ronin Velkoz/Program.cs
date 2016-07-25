@@ -74,7 +74,7 @@ namespace RoninVelkoz
              if (Champion != null)
              {
 	             var enemydirection = (Champion.Position.To2D() - CurrentTarget.Position.To2D()).Normalized();
-	             var enemydirection2 = enemydirection.To3D();
+	             var Vector3 enemydirection2 = enemydirection.To3D();
 	             var CurrentTarget = TargetSelector.GetTarget(1500, DamageType.Magical);
 	             Drawing.DrawLine(Champion.Position.WorldToScreen(), intersection2.WorldToScreen(), 2, System.Drawing.Color.White);
 	             Drawing.DrawLine(CurrentTarget.Position.WorldToScreen(), intersection2.WorldToScreen(), 2, System.Drawing.Color.White);
