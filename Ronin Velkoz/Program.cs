@@ -126,17 +126,21 @@ namespace RoninVelkoz
                                 }
                                 var collisionObjects = EntityManager.MinionsAndMonsters.GetLaneMinions(EntityManager.UnitTeam.Both,
 				Champion.Position,1500, false);
-                                if (currentStep == 0)
-                                {
-                                      currentStep = step;
-                                      intersection = CurrentTarget.ServerPosition;
-				}
-				else
-                                {
-                                     
-                                     intersection = skillshotline.To3D();
-				}
-				
+                                foreach (var minion in collisionObjects)
+                                if(!Prediction.Position.Collision.LinearMissileCollision(minion, Champion.Position, intersection, 1300, 100, 250))
+	                        { 
+	                                if (currentStep == 0)
+	                                {
+	                                      currentStep = step;
+	                                      intersection = CurrentTarget.ServerPosition;
+					}
+					else
+	                                {
+	                                     
+	                                     intersection = skillshotline.To3D();
+					}
+	                        }	
+	
 				
                                 
                         }        
