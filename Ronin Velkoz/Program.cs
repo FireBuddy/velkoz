@@ -71,7 +71,7 @@ namespace RoninVelkoz
         public static void OnDraw3(EventArgs args)
         {
              
-             if (Champion != null)
+             if (Champion != null && SpellsManager.Q.IsReady)
              {
 
 	             var CurrentTarget = TargetSelector.GetTarget(1500, DamageType.Magical);
