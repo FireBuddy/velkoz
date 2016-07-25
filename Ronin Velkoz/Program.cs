@@ -61,7 +61,7 @@ namespace RoninVelkoz
             Interrupter.OnInterruptableSpell += InterruptMode;
             Gapcloser.OnGapcloser += GapCloserMode;
             Game.OnUpdate += QSplitter;
-            Game.OnUpdate += QSplitter2;
+            //Game.OnUpdate += QSplitter2;
             //Game.OnUpdate += OnTick;
             GameObject.OnCreate += Obj_AI_Base_OnCreate;
             GameObject.OnCreate += SpellsManager.OnCreate;
