@@ -71,15 +71,15 @@ namespace RoninVelkoz
         private static void OnDraw3(EventArgs args)
         {
              
-             var CurrentTarget = TargetSelector.GetTarget(1500, DamageType.Magical);
-	     var enemydirection = CurrentTarget.ServerPosition;
+             //var CurrentTarget = TargetSelector.GetTarget(1500, DamageType.Magical);
+	    // var enemydirection = CurrentTarget.ServerPosition;
 	     var startPos = Handle.Position.To2D();
              if (Champion != null && SpellsManager.Q.IsReady())
              {
 
 
 		     Circle.Draw(SharpDX.Color.White, 200, 200, intersection);
-	             Circle.Draw(SharpDX.Color.Blue, 100, 100, enemydirection);
+	            // Circle.Draw(SharpDX.Color.Blue, 100, 100, enemydirection);
 	             Circle.Draw(SharpDX.Color.Red, 10, 50, startPos.To3D());
 	             foreach (var perpendicular in Perpendiculars)
 	             {
@@ -102,7 +102,7 @@ namespace RoninVelkoz
 			var cos = Math.Cos(currentAngle);
 			var intcos = (int)cos;
 			
-			var enemydirection = (Champion.ServerPosition - CurrentTarget.ServerPosition).Normalized();
+			var enemydirection = (CurrentTarget.ServerPosition - Champion.ServerPosition).Normalized();
                         var skillshotline = (enemydirection * 1100 * intcos);
 
                         while (true)    
