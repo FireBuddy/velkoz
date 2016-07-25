@@ -63,7 +63,7 @@ namespace RoninVelkoz
             Game.OnUpdate += QSplitter;
             Game.OnUpdate += QSplitter2;
             //Game.OnUpdate += OnTick;
-            Obj_AI_Base.OnProcessSpellCast += Obj_AI_Base_OnCreate;
+            GameObject.OnCreate += Obj_AI_Base_OnCreate;
             GameObject.OnCreate += SpellsManager.OnCreate;
             Drawing.OnDraw += OnDraw3;
         }
@@ -226,18 +226,18 @@ namespace RoninVelkoz
             return m[item].Cast<ComboBox>().CurrentValue;
         }
 
-         private static void  Obj_AI_Base_OnCreate(Obj_AI_Base sender, GameObjectProcessSpellCastEventArgs args)
+        public static void Obj_AI_Base_OnCreate(GameObject sender, EventArgs args)
         {
-         //   if (IsWaitingMissile)
+            if (sender.IsAlly && sender != null)
             {
                 Perpendiculars = new List<Vector2>();
-                var missile = args;
+                var missile = (MissileClient)sender;
                 if (missile.SData.Name != null && missile.SData.Name == "VelkozQMissile")
                     {
-
+                    QMissile = missile;
                     Chat.Print("oncreat");
                     
-                    Handle = missile as MissileClient;
+                    Handle = missile;
                     QTime = Core.GameTickCount;
                     }
             }
