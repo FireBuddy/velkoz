@@ -33,7 +33,7 @@ namespace RoninVelkoz.Modes
             var etarget = TargetSelector.GetTarget(E.Range, DamageType.Magical);
             var rtarget = TargetSelector.GetTarget(R.Range, DamageType.Magical);
 
-            if (HarassMenu.GetCheckBoxValue("qUse") && qtarget.IsValidTarget(SpellsManager.Q.Range) && Q.IsReady() && Q.GetPrediction(qtarget).HitChance >= HitChance.Medium)
+            if (Program.Handle == null && HarassMenu.GetCheckBoxValue("qUse") && qtarget.IsValidTarget(SpellsManager.Q.Range) && Q.IsReady() && Q.GetPrediction(qtarget).HitChance >= HitChance.Medium)
             {
                 Q.Cast(qtarget);
             }
