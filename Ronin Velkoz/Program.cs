@@ -105,8 +105,6 @@ namespace RoninVelkoz
 			var enemydirection = (CurrentTarget.Position.To2D()).Normalized();
                         var skillshotline = ( Champion.ServerPosition.To2D() + enemydirection.Rotated(currentAngle) * 1100 * intcos);
 
-                           
-                        {
                                 // Validate the counter, break if no valid spot was found in previous loops
                                 if (currentStep > maxAngle && currentAngle < 0)
                                 {
@@ -141,8 +139,7 @@ namespace RoninVelkoz
 	                        }	
 	
 				
-                                
-                        }        
+      
                                 
 
                 }        
