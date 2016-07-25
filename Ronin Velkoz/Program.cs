@@ -103,7 +103,6 @@ namespace RoninVelkoz
 			var intcos = (int)cos;
 			
 			var enemydirection = (CurrentTarget.ServerPosition.To2D() - Champion.ServerPosition.To2D()).Normalized();
-                        var enemydirectionrotated = enemydirection.Rotated(currentAngle);
                         var skillshotline = ( enemydirection.Rotated(currentAngle) * 1100 * intcos);
 
                         while (true)    
@@ -132,7 +131,7 @@ namespace RoninVelkoz
 				else
                                 {
                                      
-                                     intersection = CurrentTarget.ServerPosition;
+                                     intersection = skillshotline.To3D();
 				}
 				
 				
