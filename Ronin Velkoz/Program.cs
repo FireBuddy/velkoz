@@ -73,12 +73,12 @@ namespace RoninVelkoz
              
              //var CurrentTarget = TargetSelector.GetTarget(1500, DamageType.Magical);
 	    // var enemydirection = CurrentTarget.ServerPosition;
-	     var startPos = Handle.Position.To2D();
-             var intertwoD = intersection.To2D();
+	  //   var startPos = Handle.Position.To2D();
+         //    var intertwoD = intersection.To2D();
 
 
 
-		     Circle.Draw(SharpDX.Color.White, 10, 50, intertwoD.To3D());
+		  //   Circle.Draw(SharpDX.Color.White, 10, 50, intertwoD.To3D());
 	            // Circle.Draw(SharpDX.Color.Blue, 100, 100, enemydirection);
 	         //    Circle.Draw(SharpDX.Color.Red, 10, 50, startPos.To3D());
 	           //  foreach (var perpendicular in Perpendiculars)
