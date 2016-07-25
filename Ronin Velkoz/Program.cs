@@ -62,7 +62,7 @@ namespace RoninVelkoz
             Gapcloser.OnGapcloser += GapCloserMode;
             Game.OnUpdate += QSplitter;
             Game.OnUpdate += QSplitter2;
-            Game.OnUpdate += QSplitter3;
+            Game.OnTick += OnTick;
             GameObject.OnCreate += Obj_AI_Base_OnCreate;
             GameObject.OnCreate += SpellsManager.OnCreate;
             Drawing.OnDraw += OnDraw3;
@@ -92,7 +92,7 @@ namespace RoninVelkoz
              }
         }
         
-        private static void QSplitter3(EventArgs args)
+        private static void OnTick(EventArgs args)
         {
         	var CurrentTarget = TargetSelector.GetTarget(6000, DamageType.Magical);
         	if (SpellsManager.Q.IsReady() && CurrentTarget != null)
