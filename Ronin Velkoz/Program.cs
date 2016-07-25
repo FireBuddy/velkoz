@@ -235,8 +235,6 @@ namespace RoninVelkoz
                 if (missile.SData.Name != null && missile.SData.Name == "VelkozQMissile")
                     {
                     QMissile = missile;
-                    Chat.Print("oncreat");
-                    
                     Handle = missile;
                     QTime = Core.GameTickCount;
                     }
