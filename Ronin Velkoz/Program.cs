@@ -128,7 +128,8 @@ namespace RoninVelkoz
 				}
 				else
                                 {
-                                    intersection = (skillshotline * enemydirection.Rotated(currentAngle));
+                                   // intersection = (skillshotline * enemydirection.Rotated(currentAngle));
+                                     intersection = CurrentTarget.Position.To2D();
 				}
 				
 				
