@@ -260,20 +260,6 @@ namespace RoninVelkoz
             else
                 Handle = null;
         }
-        private static bool MissileIsValid
-        {
-            get
-            {
-                return _missile != null;
-            }
-        }
-        public static bool IsWaitingMissile
-        {
-            get
-            {
-                return MissileIsValid || Game.Time - _lastCastTime <= 0.29f;
-            }
-        }
         private static void QSplitter2(EventArgs args)
         {
 		if (Handle != null)
