@@ -131,7 +131,7 @@ namespace RoninVelkoz
 				else
                                 {
                                      
-                                     intersection = skillshotline.To3D();
+                                     intersection = Champion.ServerPosition;
 				}
 				
 				
