@@ -74,7 +74,7 @@ namespace RoninVelkoz
              //var CurrentTarget = TargetSelector.GetTarget(1500, DamageType.Magical);
 	    // var enemydirection = CurrentTarget.ServerPosition;
 	     var startPos = Handle.Position.To2D();
-             var intertwoD = intersection.Position.To2D();
+             var intertwoD = intersection.To2D();
              if (Champion != null && SpellsManager.Q.IsReady())
              {
 
