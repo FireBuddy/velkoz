@@ -62,7 +62,7 @@ namespace RoninVelkoz
             Gapcloser.OnGapcloser += GapCloserMode;
             Game.OnUpdate += QSplitter;
             Game.OnUpdate += QSplitter2;
-            Game.OnTick += OnTick;
+            Game.OnUpdate += OnTick;
             GameObject.OnCreate += Obj_AI_Base_OnCreate;
             GameObject.OnCreate += SpellsManager.OnCreate;
             Drawing.OnDraw += OnDraw3;
