@@ -56,7 +56,7 @@ namespace RoninVelkoz
             SpellsManager.InitializeSpells();
             Menus.CreateMenu();
             ModeManager.InitializeModes();
-            DrawingsManager.InitializeDrawings();
+            //DrawingsManager.InitializeDrawings();
             Interrupter.OnInterruptableSpell += InterruptMode;
             Gapcloser.OnGapcloser += GapCloserMode;
             Game.OnUpdate += QSplitter;
