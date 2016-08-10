@@ -38,11 +38,10 @@ namespace RoninVelkoz
         //}
         public static AIHeroClient Champion { get { return Player.Instance; } }
         private static List<Vector2> Perpendiculars { get; set; }
-        private static MissileClient QMissile;
         private static MissileClient Handle;
-        public const float maxAngle = 96f;
-        private static Vector3 intersection;
-        public static Vector3 intersection2 = intersection;
+        //public const float maxAngle = 96f;
+       // private static Vector3 intersection;
+       // public static Vector3 intersection2 = intersection;
         //public static Vector3 LastPosition = new Vector3(Handle.Position).To3D(); 
         public static float QTime = 0;
         /// <summary>
@@ -231,7 +230,6 @@ namespace RoninVelkoz
                 var missile = (MissileClient)sender;
                 if (missile.SData.Name != null && missile.SData.Name == "VelkozQMissile")
                     {
-                    QMissile = missile;
                     Handle = missile;
                     QTime = Core.GameTickCount;
                     }
