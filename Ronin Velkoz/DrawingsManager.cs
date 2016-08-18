@@ -11,9 +11,9 @@ namespace RoninVelkoz
     {
         public static void InitializeDrawings()
         {
-            Drawing.OnDraw += Drawing_OnDraw;
-            Drawing.OnEndScene += Drawing_OnEndScene;
-            DamageIndicator.Init();
+            //Drawing.OnDraw += Drawing_OnDraw;
+            //Drawing.OnEndScene += Drawing_OnEndScene;
+            //DamageIndicator.Init();
         }
 
         /// <summary>
